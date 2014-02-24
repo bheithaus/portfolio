@@ -1,0 +1,9 @@
+{  "watch": [
+    "/gulpfile.coffee"
+    "/*.styl"
+    "/*.coffee"
+    "/client/coffeescripts/",
+    "/routes/*",
+    "/library/*"
+  ]
+}
