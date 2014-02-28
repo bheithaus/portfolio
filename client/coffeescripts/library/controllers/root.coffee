@@ -15,8 +15,22 @@ angular.module 'coffeeboiler.controllers'
     UserSession.loggedIn()
 
   $scope.user = UserSession
+  
+  # $(()->
+  #   once = false
+  #   blur = 20
+  #   $body = $('body')
+
+  #   clarify = () ->
+  #     once = true
+  #     if blur >= 0
+  #       console.log blur
+  #       $body.css('-webkit-filter', "blur(#{ blur }px)")
+  #       blur--
+  #       window.setTimeout clarify, 10
 
 
-
+  #   clarify() if not once
+  # )
 
 

@@ -11,7 +11,6 @@ uglify = includeG 'uglify'
 gutil = includeG 'util'
 concat = includeG 'concat'
 stylus = includeG 'stylus'
-watch = includeG 'watch'
 
 # Paths
 vendor_js = 
@@ -72,6 +71,8 @@ scripts = () ->
     .pipe gulp.dest(path.scripts.dest)
 
 styles = () ->
+  console.log 'compiling stylesheets..'
+
   gulp.src path.styles.src
     .pipe stylus({ use: ['nib'] })
     .pipe concat('style.css') 
@@ -82,7 +83,7 @@ gulp.task 'scripts', scripts
 gulp.task 'styles', styles
 gulp.task 'watch', () ->
   gulp.watch path.styles.src, () ->
-    gulp.run('styles')
+    styles()
   
 
 gulp.task 'default', ['scripts', 'styles', 'watch']

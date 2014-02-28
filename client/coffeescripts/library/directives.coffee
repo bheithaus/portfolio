@@ -3,22 +3,13 @@
 # /* Directives */
 angular.module 'coffeeboiler.directives', []
 
-.directive 'gryft', 
-  () ->
-    restrict: 'A'
-    scope: { meta: '=' }
-    template: '<h4>{{creator}}</h4>'+
-    '<span class="price">{{price}}</span>'+ 
-    '<img class="img-rounded col-xs-12 clearfix" src="{{src}}"/>'
+.directive 'ngCard', () ->
+  restrict: 'AE'
+  scope: { skill: '=' }
+  templateUrl: 'views/partials/skill'
+  link: () ->
 
-    link: ($scope, element, attrs) ->
-      meta = $scope.meta
-      if meta._id
-        $scope.src = "#{ coffeeboiler_constants.gryft_base }#{ meta._id }.jpg"
-        $scope.creator = meta.creator
-        $scope.price = meta.price || 'no price'
-
-
+    console.log 'hmmm'
 
 .directive 'tagManager', () ->
     restrict: 'E'

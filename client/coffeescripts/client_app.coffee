@@ -20,29 +20,20 @@ coffeeboiler = angular.module 'coffeeboiler', [
       templateUrl: 'partials/home'
       controller: 'HomeCtrl'
 
-    .state 'create',
-      url: '/create'
-      templateUrl: 'partials/entity/create'
-      controller: 'CreateCtrl'
-      authenticate: true
+    .state 'skills',
+      url: '/skills'
+      templateUrl: 'partials/skills'
+      controller: 'SkillsCtrl'
 
-    .state 'list',
-      url: '/entities'
-      templateUrl: 'partials/entity/list'
-      controller: 'ListCtrl'
+    .state 'resume',
+      url: '/resume'
+      templateUrl: 'partials/resume'
+      controller: 'SkillsCtrl'
 
-    .state 'show',
-      url: '/entities/:id'
-      templateUrl: 'partials/entity/show'
-      controller: 'ShowCtrl'
-
-    .state 'login',
-      # templateUrl: 'partials/session/login'
-      controller: 'LoginCtrl'
-
-    .state 'logout',
-      url: '/logout'
-      controller: 'LogoutCtrl'
+    .state 'projects',
+      url: '/projects'
+      templateUrl: 'partials/projects'
+      controller: 'ProjectsCtrl'
 
   # For any unmatched url, redirect to /state1
   $urlRouterProvider.otherwise '/'

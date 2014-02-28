@@ -1,15 +1,99 @@
+.card,
+.skills {
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  margin: 20px 0;
+  padding: 0 10px;
+  background: rgba(0,0,0,0.3);
+  color: #e6e6e6;
+}
+.card .card-header,
+.skills .card-header {
+  border-bottom: solid 1px #fff;
+  padding: 5px 20px 0 20px;
+}
+.card .card-body,
+.skills .card-body {
+  margin-top: 20px;
+  padding: 0 20px;
+}
 html {
   height: 100%;
 }
 body {
+  margin-top: 55px;
+}
+.background {
   background: -webkit-linear-gradient(top, #fff, #000);
   background: -moz-linear-gradient(top, #fff, #000);
   background: -o-linear-gradient(top, #fff, #000);
   background: -ms-linear-gradient(top, #fff, #000);
   background: linear-gradient(to bottom, #fff, #000);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 55px;
+  bottom: 0;
+  z-index: 1;
+}
+.content {
+  z-index: 2;
+}
+.content:before {
+  background-image: url("/images/flowers.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
-  margin-top: 55px;
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  display: block;
+  -webkit-filter: blur(4px);
+}
+div {
+  -webkit-transition: all 1s ease-in;
+  -moz-transition: all 1s ease-in;
+  -o-transition: all 1s ease-in;
+  -ms-transition: all 1s ease-in;
+  transition: all 1s ease-in;
+}
+.skills {
+  background: rgba(0,0,0,0.5);
+}
+.skill-outer {
+  width: 190px;
+  display: inline-block;
+}
+.skill-inner {
+  padding: 10px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  text-align: center;
+}
+.skill-inner h4 {
+  display: inline-block;
+}
+.skill-inner:hover {
+  background: rgba(0,0,0,0.3);
+}
+.skill-inner a {
+  color: #e6e6e6;
+}
+.skill-inner img {
+  height: 40px;
+  padding: 10px 20px;
+  background: rgba(179,179,179,0.5);
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto;
+}
+.projects .project li {
+  font-size: 20px;
+  line-height: 30px;
 }

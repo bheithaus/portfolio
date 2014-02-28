@@ -1,0 +1,14 @@
+div.projects.card
+  div.card-header
+    h1 Personal Projects
+
+  div.card-body
+    div.project.row(ng-repeat='project in projects')
+      h3 {{ project.name }}
+      img.col-xs-4(src='/images/projects/{{ project.image }}')
+
+      div.col-xs-6
+        ul.tech.list-unstyled
+          li(ng-repeat='tech in project.techs') {{ tech }}
+
+

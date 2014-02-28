@@ -3,7 +3,7 @@ module.exports =
 
   index: (req, res) ->
     res.render 'index', { 
-      title: 'Express'
+      title: 'Brian Heithaus'
       user: req.user
     }
 

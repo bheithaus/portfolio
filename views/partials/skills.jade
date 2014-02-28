@@ -1,0 +1,25 @@
+div.skills.card
+  div.card-header
+    h1 Technologies that I love to build with
+
+  div.card-body
+    div.category
+      h3 Languages
+      div.skill-outer(ng-repeat='skill in languages', ng-include="'partials/skill'")
+      hr
+
+    div.category
+      h3 Frontend
+      div.skill-outer(ng-repeat='skill in frontend', ng-include="'partials/skill'")
+      hr
+
+    div.category
+      h3 Backend
+      div.skill-outer(ng-repeat='skill in backend', ng-include="'partials/skill'")
+      hr
+
+    div.category
+      h3 Devops
+      div.skill-outer(ng-repeat='skill in devops', ng-include="'partials/skill'")
+      hr
+

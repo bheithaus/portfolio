@@ -1,10 +1,99 @@
 @import 'nib'
+header_height = 55px
+
+.card 
+  border-radius 3px
+  margin 20px 0
+  padding 0 10px
+  background hsla(0,0%,0%, 0.3)
+  color hsl(0,0%,90%)
+
+  .card-header
+    border-bottom solid 1px white
+    padding 5px 20px 0 20px
+
+  .card-body
+    margin-top 20px
+    padding 0 20px
 
 html 
   height 100%
 
 body
+  margin-top header_height
+
+
+.background
   background linear-gradient(top, white, black)
-  background-size cover
-  background-repeat no-repeat
-  margin-top 55px
+  position fixed
+  left 0
+  right 0
+  top header_height
+  bottom 0
+  z-index 1
+
+
+.content
+  z-index 2
+
+  &:before
+    background-image url('/images/flowers.jpg')
+    background-size cover
+    background-repeat no-repeat
+    content ""
+    position fixed
+    left 0
+    right 0
+    top 0
+    bottom 0
+    z-index -1
+    
+    display block
+    -webkit-filter blur(4px)
+
+// All Animations on Divs
+div
+  transition: all 1s ease-in;  
+
+//  SKILLS  //
+.skills
+  @extend .card
+
+  background hsla(0,0%,0%, 0.5)
+
+
+.skill-outer
+  width 190px
+  display inline-block
+
+.skill-inner
+  padding 10px
+  border-radius 3px
+  text-align center
+
+  h4
+    display inline-block
+
+  &:hover
+    background hsla(0,0%,0%, 0.3)
+
+  a
+    color hsl(0,0%,90%)
+
+  img 
+    height 40px
+    padding 10px 20px
+    background hsla(0,0%,70%, 0.5)
+    border-radius 5px
+    display block
+    margin 0 auto
+
+
+//  PROJECTS  //
+.projects
+  .project
+    img
+      // width 300px
+    li
+      font-size 20px
+      line-height 30px
