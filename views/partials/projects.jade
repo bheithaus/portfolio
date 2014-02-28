@@ -1,11 +1,18 @@
-div.projects.card
+div.projects.card.clearfix
   div.card-header
     h1 Personal Projects
 
   div.card-body
-    div.project.row(ng-repeat='project in projects')
+    div.project.col-xs-6(ng-repeat='project in projects')
+      a.btn.btn-primary.pull-right(ng-show='project.href', href='{{"http://" + project.href}}', target='_blank') 
+        | View in production
+
+      a.btn.btn-default.pull-right(ng-hide='project.href', disabled='true')
+        | Not in Production
+       
       h3 {{ project.name }}
-      img.col-xs-4(src='/images/projects/{{ project.image }}')
+      
+      img.col-xs-6(ng-show='project.image', src='/images/projects/{{ project.image }}')
 
       div.col-xs-6
         ul.tech.list-unstyled

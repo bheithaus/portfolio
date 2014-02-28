@@ -10,6 +10,7 @@ angular.module 'coffeeboiler.controllers'
     {
       name: 'Super Snake'
       image: 'snake.png'
+      href: 'snakeaholic.com'
       techs: [
         'Express Framework'
         'MongoDB'
@@ -35,6 +36,7 @@ angular.module 'coffeeboiler.controllers'
     {
       name: 'BitIsland'
       image: 'bitisland.png'
+      href: 'bitisland.net'      
       techs: [
         'Express Framework'
         'Angular JS'
@@ -46,6 +48,7 @@ angular.module 'coffeeboiler.controllers'
     {
       name: 'CoffeeBoiler'
       image: ''
+      href: 'github.com/bheithaus/coffeeboiler'
       techs: [
         'Express'
         'Angular'
@@ -59,6 +62,8 @@ angular.module 'coffeeboiler.controllers'
     {
       name: 'PVP Chess'
       image: 'chess.jpg'
+      href: 'pvpchess.herokuapp.com'
+
       techs: [
         'Ruby on Rails'
         'Ruby Chess Library (mine)'
@@ -69,6 +74,8 @@ angular.module 'coffeeboiler.controllers'
     {
       name: 'Soundvillage Radio'
       image: 'soundvillage.jpg'
+      href: 'soundvillage.herokuapp.com'
+  
       techs: [
         'Ruby on Rails'
         'Soundcloud API and javascript SDK'
