@@ -4,7 +4,7 @@
   border-radius: 3px;
   margin: 20px 0;
   padding: 0 10px;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0,0,0,0.8);
   color: #e6e6e6;
 }
 .card .card-header,
@@ -47,6 +47,9 @@ body {
   background-repeat: no-repeat;
   content: "";
   position: fixed;
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
   left: 0;
   right: 0;
   top: 0;
@@ -61,9 +64,6 @@ div {
   -o-transition: all 1s ease-in;
   -ms-transition: all 1s ease-in;
   transition: all 1s ease-in;
-}
-.skills {
-  background: rgba(0,0,0,0.5);
 }
 .skill-outer {
   width: 190px;
@@ -93,7 +93,9 @@ div {
   display: block;
   margin: 0 auto;
 }
+.projects .project {
+  padding: 20px;
+}
 .projects .project li {
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 16px;
 }

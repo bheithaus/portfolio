@@ -36,7 +36,7 @@ coffeeboiler = angular.module 'coffeeboiler', [
       controller: 'ProjectsCtrl'
 
   # For any unmatched url, redirect to /state1
-  $urlRouterProvider.otherwise '/'
+  $urlRouterProvider.otherwise '/projects'
 
 .run ['$rootScope', '$state', 'Auth', ($rootScope, $state, Auth) ->
   Auth.monitor()

@@ -12,10 +12,13 @@ div.projects.card.clearfix
        
       h3 {{ project.name }}
       
+      p {{ project.description }}
+
       img.col-xs-6(ng-show='project.image', src='/images/projects/{{ project.image }}')
 
       div.col-xs-6
-        ul.tech.list-unstyled
+        h4 featuring
+        ul.tech
           li(ng-repeat='tech in project.techs') {{ tech }}
 
 
