@@ -9,8 +9,13 @@ div.projects.card.clearfix
 
       a.btn.btn-default.pull-right(ng-hide='project.href', disabled='true')
         | Not in Production
+      
+      a.btn.btn-default.pull-right(ng-show='project.git', href='{{"http://github.com/" + project.git}}', target='_blank') 
+        | Code
+        span.fa.fa-github.margin-left
        
       h3 {{ project.name }}
+
       
       p {{ project.description }}
 

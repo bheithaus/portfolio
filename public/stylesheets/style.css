@@ -65,6 +65,9 @@ div {
   -ms-transition: all 1s ease-in;
   transition: all 1s ease-in;
 }
+.btn .fa.margin-left {
+  margin-left: 10px;
+}
 .skill-outer {
   width: 190px;
   display: inline-block;
@@ -98,4 +101,7 @@ div {
 }
 .projects .project li {
   font-size: 16px;
+}
+.projects .project .btn {
+  margin: 0 5px;
 }
