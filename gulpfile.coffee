@@ -1,4 +1,4 @@
-includeG = (module) -> 
+includeG = (module) ->
   require 'gulp-' + module
 
 # Requires
@@ -13,7 +13,7 @@ concat = includeG 'concat'
 stylus = includeG 'stylus'
 
 # Paths
-vendor_js = 
+vendor_js =
   bower:
     base: './bower_components/'
     dependencies: [
@@ -41,12 +41,12 @@ for namespace, obj of vendor_js
     obj.dependencies[i] = "#{ obj.base }#{ lib }"
 
 client_base = './client/coffeescripts/'
-path = 
+path =
   styles:
     src: 'client/stylesheets/**/*.styl'
     dest: 'public/stylesheets'
 
-  scripts: 
+  scripts:
     src: {
       client:[
         client_base + 'config/*.coffee'
@@ -62,8 +62,8 @@ path =
 scripts = () ->
   gulp.src path.scripts.src.client
     .pipe coffee({ bare: true })
-    .on 'error', gutil.log 
-    .pipe concat('index.js') 
+    .on 'error', gutil.log
+    .pipe concat('index.js')
     .pipe gulp.dest(path.scripts.dest)
 
   gulp.src vendor_js.bower.dependencies.concat vendor_js.vendor.dependencies
@@ -75,22 +75,18 @@ styles = () ->
 
   gulp.src path.styles.src
     .pipe stylus({ use: ['nib'] })
-    .pipe concat('style.css') 
+    .pipe concat('style.css')
     .pipe gulp.dest(path.styles.dest)
 
 # Tasks
 gulp.task 'scripts', scripts
 gulp.task 'styles', styles
-gulp.task 'watch', () ->
-  gulp.watch path.styles.src, () ->
-    styles()
-  
 
-gulp.task 'default', ['scripts', 'styles', 'watch']
+gulp.task 'default', ['scripts', 'styles']
 
 
 # You can minify your Jade Templates here
-# 
+#
 # gulp.task 'jade', ->
 #   gulp.src './views/*.jade'
 #     .pipe(jade())
@@ -100,5 +96,4 @@ gulp.task 'default', ['scripts', 'styles', 'watch']
 nodemon(
   script: 'app.coffee'
 ).on('restart', ->
-  scripts()
 )

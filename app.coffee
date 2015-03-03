@@ -15,7 +15,7 @@ GLOBAL.config = require './config'
 # fake
 privateKey  = fs.readFileSync 'sslcert/server.key', 'utf8'
 certificate = fs.readFileSync 'sslcert/server.crt', 'utf8'
-credentials = 
+credentials =
   key: privateKey
   cert: certificate
 
@@ -28,7 +28,7 @@ paths =
   public: express.static path.join(__dirname, '/public')
 
 #  all environments
-app.set 'port', process.env.PORT || 3000
+app.set 'port', process.env.PORT || 4000
 app.set 'views', path.join(__dirname, '/views')
 app.set 'view engine', 'jade'
 
@@ -83,7 +83,7 @@ io.sockets.on 'connection', (socket) ->
 
   socket.on 'ready', ->
     id = client_ip
-  
-    socket.emit 'attach-client', 
+
+    socket.emit 'attach-client',
       id: id
 

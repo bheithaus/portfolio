@@ -7,7 +7,6 @@ angular.module 'coffeeboiler.controllers'
     { name: 'Ruby', href: 'ruby-lang.org', logo: 'https://www.ruby-lang.org/images/header-ruby-logo.png'}
     { name: 'CoffeeScript', href: 'coffeescript.org', logo: 'http://coffeescript.org/documentation/images/logo.png' }
     { name: 'Javascript', href: 'developer.mozilla.org/en-US/docs/Web/JavaScript' }
-    { name: 'Java and Python (beginner level)'}
   ]
 
   $scope.frontend = [

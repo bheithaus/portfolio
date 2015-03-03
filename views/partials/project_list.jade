@@ -1,0 +1,32 @@
+div.projects.card.clearfix
+  div.card-header
+    h1 Projects
+
+  div.card-body
+    div.project.col-xs-6(ng-repeat='(projectID, project) in projects')
+      a.btn.btn-primary.pull-right(ng-show='project.href', href='{{"http://" + project.href}}', target='_blank')
+        | View in production
+
+      a.btn.btn-default.pull-right(ng-hide='project.href', disabled='true')
+        | Not in Production
+
+      a.btn.btn-default.pull-right(ng-show='project.git', href='{{"http://github.com/" + project.git}}', target='_blank')
+        | Code
+        span.fa.fa-github.margin-left
+
+      a.btn.btn-default.pull-right(ng-show='project.more', href='/projects/{{ projectID }}')
+        | More ...
+
+      h3 {{ project.name }}
+
+
+      p {{ project.description }}
+
+      img.col-xs-6(ng-show='project.image', src='/images/projects/{{ project.image }}')
+
+      div.col-xs-6
+        h4 featuring
+        ul.tech
+          li(ng-repeat='tech in project.techs') {{ tech }}
+
+

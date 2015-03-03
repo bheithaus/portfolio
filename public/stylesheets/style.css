@@ -1,11 +1,26 @@
+.navbar {
+  min-height: 100px;
+  margin-bottom: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.navbar .container-fluid {
+  margin-top: 25px;
+  font-size: 18px;
+  padding: 0 30px;
+}
+.navbar .navbar-brand {
+  font-size: 24px;
+  margin-right: 20px;
+}
 .card,
 .skills {
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  margin: 20px 0;
+  margin: 0;
   padding: 0 10px;
-  background: rgba(0,0,0,0.8);
-  color: #e6e6e6;
+  background: rgba(255,255,255,0.9);
+  color: #303030;
 }
 .card .card-header,
 .skills .card-header {
@@ -15,13 +30,10 @@
 .card .card-body,
 .skills .card-body {
   margin-top: 20px;
-  padding: 0 20px;
+  padding: 0 40px;
 }
 html {
   height: 100%;
-}
-body {
-  margin-top: 55px;
 }
 .background {
   background: -webkit-linear-gradient(top, #fff, #000);
@@ -47,17 +59,18 @@ body {
   background-repeat: no-repeat;
   content: "";
   position: fixed;
-  opacity: 0.5;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-  filter: alpha(opacity=50);
+  opacity: 0.6;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+  filter: alpha(opacity=60);
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
   z-index: -1;
   display: block;
-  -webkit-filter: blur(4px);
+  -webkit-filter: blur(0.5px);
 }
+.,
 div {
   -webkit-transition: all 1s ease-in;
   -moz-transition: all 1s ease-in;
@@ -68,15 +81,23 @@ div {
 .btn .fa.margin-left {
   margin-left: 10px;
 }
+.skills {
+  text-align: center;
+}
+.skills .category .title {
+  margin-bottom: 40px;
+}
 .skill-outer {
   width: 190px;
   display: inline-block;
+  overflow: hidden;
 }
 .skill-inner {
   padding: 10px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
   text-align: center;
+  height: 92px;
 }
 .skill-inner h4 {
   display: inline-block;
@@ -85,7 +106,7 @@ div {
   background: rgba(0,0,0,0.3);
 }
 .skill-inner a {
-  color: #e6e6e6;
+  color: #303030;
 }
 .skill-inner img {
   height: 40px;

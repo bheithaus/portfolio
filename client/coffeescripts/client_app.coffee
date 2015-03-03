@@ -20,8 +20,8 @@ coffeeboiler = angular.module 'coffeeboiler', [
       templateUrl: 'partials/home'
       controller: 'HomeCtrl'
 
-    .state 'skills',
-      url: '/skills'
+    .state 'tech',
+      url: '/tech'
       templateUrl: 'partials/skills'
       controller: 'SkillsCtrl'
 
@@ -32,11 +32,16 @@ coffeeboiler = angular.module 'coffeeboiler', [
 
     .state 'projects',
       url: '/projects'
-      templateUrl: 'partials/projects'
-      controller: 'ProjectsCtrl'
+      templateUrl: 'partials/project_list'
+      controller: 'ProjectListCtrl'
+
+    .state 'project',
+      url: '/projects/:project_id'
+      templateUrl: 'partials/project'
+      controller: 'ProjectCtrl'
 
   # For any unmatched url, redirect to /state1
-  $urlRouterProvider.otherwise '/projects'
+  $urlRouterProvider.otherwise '/portfolio'
 
 .run ['$rootScope', '$state', 'Auth', ($rootScope, $state, Auth) ->
   Auth.monitor()

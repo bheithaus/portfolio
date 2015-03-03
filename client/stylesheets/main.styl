@@ -1,12 +1,26 @@
 @import 'nib'
 header_height = 55px
 
-.card 
+.navbar
+    min-height 100px
+    margin-bottom 0
+    border-radius 0
+
+    .container-fluid
+        margin-top 25px
+        font-size 18px
+        padding 0 30px
+
+    .navbar-brand
+        font-size 24px
+        margin-right 20px
+
+.card
   border-radius 3px
-  margin 20px 0
+  margin 0
   padding 0 10px
-  background hsla(0,0%,0%, 0.8)
-  color hsl(0,0%,90%)
+  background rgba(255,255,255,0.9)
+  color #303030
 
   .card-header
     border-bottom solid 1px white
@@ -14,13 +28,10 @@ header_height = 55px
 
   .card-body
     margin-top 20px
-    padding 0 20px
+    padding 0 40px
 
-html 
+html
   height 100%
-
-body
-  margin-top header_height
 
 .background
   background linear-gradient(top, white, black)
@@ -40,19 +51,21 @@ body
     background-repeat no-repeat
     content ""
     position fixed
-    opacity 0.5
+    opacity 0.6
     left 0
     right 0
     top 0
     bottom 0
     z-index -1
-    
+
     display block
-    -webkit-filter blur(4px)
+    -webkit-filter blur(0.5px)
+
+.
 
 // All Animations on Divs
 div
-  transition: all 1s ease-in;  
+  transition all 1s ease-in;
 
 
 // Buttons //
@@ -64,15 +77,24 @@ div
 //  SKILLS  //
 .skills
   @extend .card
+  
+  text-align: center
+  
+  .category
+    .title
+      margin-bottom 40px
 
 .skill-outer
   width 190px
   display inline-block
+  overflow hidden
 
 .skill-inner
   padding 10px
   border-radius 3px
   text-align center
+  height 92px
+
 
   h4
     display inline-block
@@ -81,9 +103,9 @@ div
     background hsla(0,0%,0%, 0.3)
 
   a
-    color hsl(0,0%,90%)
+    color #303030;
 
-  img 
+  img
     height 40px
     padding 10px 20px
     background hsla(0,0%,70%, 0.5)
